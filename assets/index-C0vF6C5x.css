@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&display=swap");*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li,
+label,
+button,
+input,
+form,
+fieldset,
+legend,
+header,
+main,
+footer,
+section,
+dialog {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}header,
+main,
+footer,
+section {
+  display: block;
+}body {
+  line-height: 1;
+}ol,
+ul {
+  list-style: none;
+}fieldset {
+  min-width: 0;
+}:root {
+  /* colors */
+  --primary: #4e5ba6;
+  --primary-20: rgba(78, 91, 166, 0.2);
+  --white: #ffffff;
+  --bg: #fcfcfd;
+  --gray-1: #b4b4b4;
+  --gray-2: #8b8b8b;
+  --black: #000000;
+  --black-12: rgba(0, 0, 0, 0.12);
+  --black-50: rgba(0, 0, 0, 0.5);
+
+  /* font */
+  --font: "Roboto", sans-serif;
+}body {
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  background-color: var(--bg);
+  color: var(--black);
+}input {
+  border: 1px solid var(--gray-1);
+  border-radius: 4px;
+  outline: none;
+  font-size: 15px;
+}button {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  cursor: pointer;
+}dialog {
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+}dialog::backdrop {
+  background: var(--black-50);
+}/* typography */.title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.5;
+}.subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+}.caption {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.25px;
+}.error-message {
+  font-size: 13px;
+  color: #d32f2f;
+}header {
+  width: 100%;
+  height: 64px;
+  padding: 14px 130px;
+  background-color: var(--primary);
+}header .title {
+  color: var(--white);
+}footer {
+  width: 100%;
+  padding: 28px 0 36px;
+  border-top: 1px solid var(--primary-20);
+}footer p {
+  text-align: center;
+  color: var(--primary);
+  line-height: 16px;
+}.lotto-card {
+  width: 414px;
+  min-height: 727px;
+  margin: 84px auto 69px;
+  padding: 40px 16px 32px;
+  border: 1px solid var(--black-12);
+  border-radius: 4px;
+  background-color: var(--white);
+}.lotto-card__title {
+  margin-bottom: 28px;
+  text-align: center;
+}/* 구매 폼 */.purchase-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}.purchase-section__form {
+  display: flex;
+  gap: 16px;
+  height: 36px;
+}.purchase-section__input {
+  flex: 1;
+  height: 36px;
+  padding: 8px;
+}.purchase-section__btn {
+  width: 56px;
+  height: 36px;
+  padding: 6px 6px 6px 8px;
+}/* 로또 목록 */.lotto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 28px;
+}.lotto-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 276px;
+  overflow-y: scroll;
+}.lotto-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+}.lotto-item__icon {
+  font-size: 20px;
+}/* 당첨번호 입력 */.winning-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}.winning-section__inputs {
+  display: flex;
+  justify-content: space-between;
+}.number-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}.number-group__fields {
+  display: flex;
+  gap: 4px;
+}.number-group--bonus .number-group__fields {
+  justify-content: flex-end;
+}.number-input {
+  width: 34px;
+  height: 36px;
+  font-size: 14px;
+  text-align: center;
+}.result-btn {
+  width: 100%;
+  margin-top: 27px;
+  padding: 10px 0;
+}.lotto-result-dialog {
+  width: 350px;
+  min-height: 500px;
+  margin: auto;
+}.lotto-result-dialog__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 16px 32px;
+}.lotto-result-dialog__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0;
+  background: none;
+  color: var(--black);
+  font-size: 16px;
+  cursor: pointer;
+}.lotto-result-dialog__title {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  text-align: center;
+}/* 통계 테이블 */.result-table {
+  width: 100%;
+  border-collapse: collapse;
+}.result-table th,
+.result-table td {
+  padding: 8px 0;
+  text-align: center;
+  vertical-align: middle;
+}.result-table thead tr {
+  border-top: 1px solid var(--black-12);
+  border-bottom: 1px solid var(--black-12);
+}.result-table tbody tr {
+  border-bottom: 1px solid var(--black-12);
+}.result-table th {
+  font-weight: 600;
+}.lotto-result-dialog__profit-rate {
+  font-weight: 700;
+  text-align: center;
+}.restart-btn {
+  width: 100%;
+  padding: 4px 6px;
+}
